@@ -1,0 +1,163 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*----------------App.js View-------------------*/
+.app-bg{
+    background-color: #0b0c10;
+    height: 100vh;
+}
+/*----------------Main-Container of Editor and Preview-------------------*/
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #0b0c10;
+}
+/*----------------Editor View-------------------*/
+.editor-view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 600px;
+    max-width: 600px;
+    background-color: #1f2833;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 255, 0.8);
+    height: auto;
+}
+.header-editor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 5px;
+}
+.header-design{
+    margin-left: 15px;
+    color: #66fcf1; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.fa{
+    margin-right: 15px;
+    font-size: 30px;
+    color: #66fcf1;
+}
+.editor-view-textarea{
+    width: 600px;
+    height: 250px;
+    resize: vertical; 
+    overflow: auto;
+    padding: 10px;
+    border: none;
+    transition: height 0.5s ease;
+}
+/*----------------Preview View-------------------*/
+.preview-view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 800px;
+    max-width: 800px;
+    background-color: #1f2833;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 255, 0.8);
+}
+.preview-marked {
+    background-color: white; 
+}
+.preview-html {
+    background-color: #fff; 
+    margin: 20px; 
+    color: black;  
+}
+/*----------------Markdown Design-------------------*/
+img{
+    margin-top: 20px;
+    margin-right: 50px;
+    height: 80px;
+    width: 750px;
+}
+p{
+    margin: 10px auto;
+}
+code{
+    background-color: black;
+    padding: 2px 4px;
+    color: yellow;
+    font-size: 15px;
+}
+pre {
+    background-color: black;
+    padding: 10px; 
+    border-radius: 4px; 
+    overflow-x: auto; 
+}
+h2{
+    margin-top: 15px;
+}
+h3{
+    margin-top: 15px;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, tr, td{
+    border: 1px solid black;
+}
+ul{
+    padding-left: 10px;
+}
+li{
+    margin-left: 10px;
+}
+/*----------------Transition-------------------*/
+.editor-view,
+.preview-view {
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+}
+.editor-view.open {
+    height: auto; 
+    overflow: auto;
+    transform: scale(1); 
+}
+.editor-view.closed {
+    height: 0;
+    overflow: hidden;
+    transform: scale(0.95);
+}
+
+.preview-view.open {
+    height: auto;
+    transform: scale(1);
+    
+}
+.preview-view.closed {
+    height: 0;
+    width: auto;
+    overflow: hidden;
+    transform: scale(0.95);
+    
+}
+.editor-view-textarea.expanded {
+    height: 600px; 
+}
+.editor-view-textarea.collapsed {
+    height: 250px; 
+}
+.isExpanded.close{
+    height: 250px;
+}
+/*----------------Separator-------------------*/
+.sperator{
+    margin-top: 20px;
+}
+
+
+  
